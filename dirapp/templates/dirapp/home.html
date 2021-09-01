@@ -13,10 +13,8 @@
 <body>
 <div class="bar">
 	<h2 align="center" style="font-family:Trebuchet MS; font-size:35px; color:white;">View Application</h2>
-	<input type="button" id="myButton" name="answer" class="btn btn-primary col-sm-4" value="Insert Data" />
-	<input type="button" id="myButton1" name="answer" class="btn btn-primary col-sm-4" value="View Data">
 	<br>
-	<div id="div1" style="display: none">
+	<div id="div1">
 		<form method="post">
 			{% csrf_token %}
 			<label>Name:</label>
@@ -29,7 +27,7 @@
 			<input type="submit" onclick="saveHandler()" id="btn" class="btn btn-success col-sm-2" style="margin-left:45%;height:35px;width:80px;" value="SUBMIT" />
 		</form>
 	</div>
-	<div id="div2" style="display: none">
+	<div id="div2">
 		<table id="example" class="table table-bordered">
 			<thead>
 			<tr>
@@ -50,25 +48,7 @@
 	<br>
 	<br>
 </div>
-<script type="text/javascript">
-$(function () {
-	  $("input[name=answer]").click(function () {
-	        if ($(this).val() == "Insert Data") {
-	            $("#div1").show();
-  				$("#div2").hide();
-            }
-            else{
-	            $("#div1").hide();
-  				$("#div2").show();
-            }
-      });
-});
-</script>
-<script>
-$('#myButton1').click(function() {
-	 $('#myButton').prop('disabled',false);
-});
-</script>
+
 </body>
 </head>
 </html>
