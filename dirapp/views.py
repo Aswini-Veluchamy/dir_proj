@@ -6,9 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 def home (request):
     if request.method == "POST":
         username = request.POST['username']
-        age = request.POST['age']
-        salary = request.POST['salary']
-        print(username,age,salary)
+        print(username)
         return render(request, "dirapp/home.html")
     else:
         return render(request, "dirapp/home.html")

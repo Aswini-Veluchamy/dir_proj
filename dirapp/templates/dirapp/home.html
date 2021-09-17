@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>View Data</title>
+	<title>Application</title>
 	<link rel="shortcut icon" href="{% static 'dirapp/img/favicon.png' %}" alt="TCS"/>
 	<link rel="stylesheet" href="{% static 'dirapp/bootstrap.min.css' %}">
 	<link href="{% static 'dirapp/css/style.css' %}" rel="stylesheet"/>
@@ -12,22 +12,18 @@
 	<script src="{% static 'dirapp/bootstrap.min.js' %}"></script>
 <body>
 <div class="bar">
-	<h2 align="center" style="font-family:Trebuchet MS; font-size:35px; color:white;">View Application</h2>
+	<h2 align="center" style="font-family:Trebuchet MS; font-size:35px; color:white;">Application</h2>
 	<br>
 	<div id="div1">
 		<form method="post">
 			{% csrf_token %}
 			<label>Name:</label>
 			<input type="text" name="username" id="username" value="" required="required" />
-			<label>Age:</label>
-			<input type="text" id="age" name="age" value=""  required="required" />
-			<label>Salary:</label>
-			<input type="text" id="salary" name="salary" value="" required="required" />
 			<p>{{error}}</p>
 			<input type="submit" onclick="saveHandler()" id="btn" class="btn btn-success col-sm-2" style="margin-left:45%;height:35px;width:80px;" value="SUBMIT" />
 		</form>
 	</div>
-	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br>
 	<div id="div2">
 		<table id="example" class="table table-bordered">
 			<thead>
